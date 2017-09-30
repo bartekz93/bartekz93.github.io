@@ -62,6 +62,17 @@
 
 
 .image {
-	height: 90vmin;
 	margin: auto;
 }   
+
+@media screen and (orientation: landscape) {
+    .image {
+        height: 90vmin;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .image {
+        width: 90vmin;
+    }
+}

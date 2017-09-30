@@ -12,30 +12,30 @@
 		<script src="src/scripts/common.js"></script>   
 		<script src="src/scripts/data.js"></script>   
 		<script src="src/scripts/views/project.js"></script>   
-
 	</head>
 
 	<body>
-
-		<div class="header">
-			<b>Bartek</b> 
-			<span style="color: whitesmoke; font-size: 15px">Projekty</span>
-		</div>
-
-		<div class="toc">
-		</div>
-
-		<div class="imageLayer">
-			<div class="nextCtrl" />&#9654;</div>
-			<div class="prevCtrl" />&#9664;</div>
-			<div class="closeCtrl" />&#10006;</div>
-			<div class="imageContainer">
+		<div class="page">
+			<div class="header">
+				<b>Bartek</b> 
+				<span style="color: whitesmoke; font-size: 15px">Projekty</span>
+			</div>
+	
+			<div class="toc">
+			</div>
+	
+			<div class="imageLayer">
+				<div class="nextCtrl" >&#9654;</div>
+				<div class="prevCtrl" >&#9664;</div>
+				<div class="closeCtrl" >&#10006;</div>
+				<div class="imageContainer">
+				</div>
 			</div>
 		</div>
 
 		<script>
 			data.forEach((project) => {
-				document.body.innerHTML += projectView(project);
+				document.body.querySelector('.page').innerHTML += projectView(project);
 			});
 		</script>
 		

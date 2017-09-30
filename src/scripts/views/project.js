@@ -10,8 +10,7 @@
 					🕑<span class="label separator"> ${project.year}</span>
 					${
 						project.url ? `
-							<a target="blank" href="${project.url}">👁️</a>
-							<span class="separator" style="margin-right: 20px"></span>` 
+							<a target="blank" href="${project.url}">👁️</a><span class="separator" style="margin-right: 20px"></span>` 
 						: ''
 					}
 				</span>

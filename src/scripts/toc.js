@@ -1,18 +1,19 @@
 ﻿(function() {
 	var toc = document.querySelector('.toc');
 	var headers = document.body.querySelectorAll('.project-name');
-	var container = document.querySelector('body, html');
+	var container = document.querySelector('.page');
+	window.c = container;
 	
 	toc.innerHTML = `
 		<ul>
-			${data.map(project => `<li>${project.name}</li>` ).join('')}
+			${data.map((project, i) => `<li id="${i}">${project.name}</li>` ).join('')}
 		</ul>`;
 		
 	var tocitems = toc.querySelectorAll('li');
 	
-	tocitems.forEach((item, i)=> {
-		item.onclick = () => {
-			var desiredScroll = headers[i].offsetTop-75;
+	for (var i=0;i<tocitems.length;i++) {
+		tocitems[i].onclick = function() {
+			var desiredScroll = headers[this.id].offsetTop-75;
 			var currentScroll = container.scrollTop;
 			
 			listenScroll = false;
@@ -23,7 +24,7 @@
 				updateToc();
 			});
 		}
-	})
+	}
 	
 	var current_header;
 	var listenScroll = true;
@@ -32,7 +33,8 @@
 		var temp, last;
 		for (var i=0;i<headers.length;i++) {
 			var header = headers[i];
-			if (header.offsetTop - container.scrollTop-container.clientHeight/2 > 0) {
+			var screenPos = header.offsetTop - container.scrollTop;
+			if (screenPos > container.clientHeight/2) {
 				temp = i;
 				break;
 			}
@@ -54,7 +56,7 @@
 	}
 	
 	
-	document.addEventListener('scroll', function() {
+	container.addEventListener('scroll', function() {
 		if (listenScroll) {
 			updateToc();
 		}
