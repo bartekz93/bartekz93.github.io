@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=300, initial-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet" type="text/css" class="ui" href="src/styles/style.css">
+		<link rel="stylesheet" type="text/css" class="ui" href="src/styles/imageviewer.css">
+
+		<script src="src/lib/jquery-1.12.0.min.js"></script>
+
+		<script src="src/scripts/common.js"></script>   
+		<script src="src/scripts/data.js"></script>   
+		<script src="src/scripts/views/project.js"></script>   
+
+	</head>
+
+	<body>
+
+		<div class="header">
+			<b>Bartek</b> 
+			<span style="color: whitesmoke; font-size: 15px">Projekty</span>
+		</div>
+
+		<div class="toc">
+		</div>
+
+		<div class="imageLayer">
+			<div class="nextCtrl" />&#9654;</div>
+			<div class="prevCtrl" />&#9664;</div>
+			<div class="closeCtrl" />&#10006;</div>
+			<div class="imageContainer">
+			</div>
+		</div>
+
+		<script>
+			data.forEach((project) => {
+				document.body.innerHTML += projectView(project);
+			});
+		</script>
+		
+		<script src="src/scripts/toc.js"></script>    
+		<script src="src/scripts/imageviewer.js"></script>    
+	</body>
+</html>
