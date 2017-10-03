@@ -176,3 +176,9 @@ a {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
+.icon {
+	display: inline; 
+	vertical-align: middle;
+	height: 24px;
+}

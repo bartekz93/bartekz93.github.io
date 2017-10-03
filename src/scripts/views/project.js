@@ -6,11 +6,16 @@
 				<div class="project-name">${project.name}</div>
 				
 				<span>
-					👤<span class="label separator"> ${project.group}</span>
-					🕑<span class="label separator"> ${project.year}</span>
+					<img class="icon" src="images/icons/person.png"/><span class="label"> ${project.group}</span>
+					<img class="icon" src="images/icons/clock.png"/><span class="label"> ${project.year}</span>
+					${
+						project.repo ? `
+							<a target="blank" href="${project.repo}"><img class="icon" src="images/icons/github.png"/></a>` 
+						: ''
+					}
 					${
 						project.url ? `
-							<a target="blank" href="${project.url}">👁️</a><span class="separator" style="margin-right: 20px"></span>` 
+							<a target="blank" href="${project.url}"><img class="icon" src="images/icons/arrow.png"/></a>` 
 						: ''
 					}
 				</span>

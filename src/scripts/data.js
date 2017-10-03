@@ -23,7 +23,8 @@
 		videosCount: 1,
 		videos: [
 			'https://drive.google.com/uc?export=download&id=0B1CMrj9obh3OalFJbnFqMkZmSUU'
-		]
+		],
+		repo: "https://github.com/bartekz93/BarRaytracer"
     },
     {
         name: 'Jump&Run',
@@ -37,7 +38,8 @@
 		videosCount: 1,
 		videos: [
 			'https://drive.google.com/uc?export=download&id=0B1CMrj9obh3OanFlSUw5bERJYmM'
-		]
+		],
+		repo: "https://github.com/bartekz93/JumpAndRun"
     },
 	{
         name: 'Network Snake',
@@ -117,6 +119,7 @@
         images: 'webglray',
         desc: "Raytracer in WebGL. This time also the main logic is written as single pixel (fragment) shader. Written in Typescript whose I am a big fan due to typechecks on write time and working code autocompletion. I think this language is great initiative in JavaScript world.",
         imagesCount: 4,
-		url: "http://raytracer.droppages.com"
+		url: "http://raytracer.droppages.com",
+		repo: "https://github.com/bartekz93/WebGL-Raytracer"
     },
 ];
