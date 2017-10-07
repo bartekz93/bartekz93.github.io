@@ -5,7 +5,7 @@
         year: '2009-2012',
         tech: ['C++', 'Direct3D 9/11', 'OpenGL 4'],
         tools: ['VisualStudio', 'PIX'],
-		desc: 'A something like graphics engine created in Direct3D and partially in some time also in OpenGL4 (the architecture was supposed to be generic and adjusted to use multiple renderers, but Direct3D implementation was far more complete than OpenGL). There were in fact many individual projects, because it was rewrtitten many times from scratch. It was able to load .obj files, generate terrain from heigtmaps with texture splatting, draws particles, skybox and other basic things. It has own 2D renderer to drawing 2d elements and fonts. Later it was implemented sort of deffered shading, shadow mapping and basic skeletal animation. There was also own simple GUI system with several most common controls.',
+		desc: 'A something like graphics engine created in Direct3D and partially in some time also in OpenGL4 (the architecture was supposed to be generic and adjusted to use multiple renderers, but Direct3D implementation was far more complete than OpenGL). There were in fact many individual projects, because it was rewrtitten many times from scratch. It was able to load .obj files, generate terrain from heigtmaps with texture splatting, draws particles, skybox and other basic things. It has own 2D renderer to drawing 2d elements and fonts. Later it was implemented sort of deferred shading, shadow mapping and basic skeletal animation. There was also own simple GUI system with several most common controls.',
         images: 'barengine',
         imagesCount: 5,
 		videosCount: 0,
