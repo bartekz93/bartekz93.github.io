@@ -122,4 +122,14 @@
 		url: "http://raytracer.droppages.com",
 		repo: "https://github.com/bartekz93/WebGL-Raytracer"
     },
+	{
+        name: 'Note App',
+		group: 1,
+        year: '2017',
+        tech: ['Typescript', 'Electron', 'React', 'MobX'],
+        tools: ['VisualStudio Code'],
+        images: 'noteapp',
+        desc: "Simple note-taking application using file system (folders and .md files) to store notes. It's desktop application built with html, css and typescript and electron framework (known mainly from Atom and Visual Studio Code editors). Application is able to display md files as raw text, html preview, or both in split screen. It supports code highlightning and latex equations thanks to highlight.js and katex libraries. Parsing markdown to html is performed by showdown library. UI written with React is supposed to mime traditional desktop apps with dockable windows, toolbars, tabpanels, context menus and so on.",
+        imagesCount: 4,
+    },
 ];
