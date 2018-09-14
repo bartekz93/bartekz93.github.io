@@ -106,7 +106,10 @@ window.onload = function() {
         iv.nextImage();
     });
 
-    $(document.body).on('click', '.closeCtrl' ,function(){
-        iv.hideImageLayer();
+    $(document.body).on('click', '.imageLayer' ,function(e){
+        console.log(e.target.className);
+        if (['imageLayer', 'imageContainer'].includes(e.target.className)) {
+            iv.hideImageLayer();
+        }
     });
 }
