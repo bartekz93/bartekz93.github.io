@@ -67,12 +67,12 @@
 
 @media screen and (orientation: landscape) {
     .image {
-        height: 90vmin;
+        max-height: 90vmin;
     }
 }
 
 @media screen and (orientation: portrait) {
     .image {
-        width: 90vmin;
+        max-width: 90vmin;
     }
 }
