@@ -16,10 +16,19 @@ a {
 	text-decoration: none;	
 }
 
+canvas {
+	z-index: -1;
+	position: fixed; 
+	box-sizing: border-box; 	
+	height: 100%; 
+	width: 100%;
+}
+
 .page {
 	height: 100%;
 	overflow: auto;
 	box-sizing: border-box;
+	z-index: 10;
 }
 
 .header {
