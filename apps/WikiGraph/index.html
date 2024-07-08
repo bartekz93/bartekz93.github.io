@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+    <script type="text/javascript" src="lib/vis-4.17/vis.js"></script>
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/SemanticUI/semantic.min.js"></script>
+	
+    <link href="lib/vis-4.17/vis.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="lib/SemanticUI/semantic.min.css">
+    <link rel="stylesheet" href="source/style.css">
+	<title>WikiGraph - Inteligentne wyszukiwanie informacji</title>
+</head>
+<body>
+	<span tabindex="0" class="ui segment nodePopup" style="display: none; z-index: 10; padding: 0px !important">
+		<span class="ui label top green caption" style="width: 100%; margin: 0px !important">
+			<span class="text" style="margin-right: 10px"></span>
+			<i class="ui icon minus collapse" data-content="Zwiń"></i>
+			<i class="ui icon remove" data-content="Usuń"></i>
+			<i class="ui icon reply goToWiki" data-content="Przejdź do wikipedii"></i>
+			<i class="ui icon newspaper showArticles" data-content="Pokaż artykuły"></i>
+		</span>
+		<div class="categories_wrapper">
+			<div style="padding: 5px">
+				Kategorie nadrzędne:
+				<i class="ui icon plus developCategories" data-content="Dodaj wszystkie"></i>
+			</div>
+			<div class="categories" style="padding: 5px">
+			</div>
+		</div>
+		<div class="subcategories_wrapper">
+			<div style="padding: 5px">
+				Kategorie podrzędne:
+				<i class="ui icon plus developSubcategories" data-content="Dodaj wszystkie"></i>
+			</div>
+			<div class="subcategories" style="padding: 5px">
+			</div>
+		</div>
+	</span>
+	
+	<div class="ui modal warningPopup">
+		<div class="header">
+			Informacja
+		</div>
+		<div class="image content">
+			<div class="description">
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui green approve button">Kontynuuj</div>
+			<div class="ui red deny button">Anuluj</div>
+		</div>
+	</div>
+	
+	<span class="menuBar" style="height: 10%">
+		<span class="ui top attached demo menu">
+			<a class="item button">
+				<i class="options icon"></i>
+				Opcje
+			</a>
+			<span class="item" style="width: 100%">
+				<div class="ui search" style="width: 100%">
+					<input class="prompt" style="width: 100%" placeholder="Szukaj... By wyszukać kategorię dodaj przedrostek 'Category:'" type="text">
+					<div class="results"></div>
+				</div>
+			</span>
+			<span class="item">
+				<div class="ui selection dropdown version">
+					<input name="country" type="hidden">
+					<i class="dropdown icon"></i>
+					<div class="default text">Wersja wikipedii</div>
+					<div class="menu">
+						<div class="item" data-value="simple"><i class="gb flag"></i>Simple English</div>
+						<div class="item" data-value="pl"><i class="pl flag"></i>Polish</div>
+						<div class="item" data-value="en"><i class="gb flag"></i>English</div>
+					</div>
+				</div>
+			</span>
+		</span>
+	</span>
+	
+	<div class="content" style="height: 90%">
+		<div class="ui bottom attached segment pushable">
+			<div class="ui inverted labeled icon left inline vertical sidebar menu" style="padding: 10px; background-color: rgba(255, 255, 255, 0.7)">
+				<table>
+					<tr>
+						<td style="padding: 10px">  
+							<div class="ui selection dropdown graphType">
+								<input name="graphType" type="hidden">
+								<i class="dropdown icon"></i>
+								<div class="default text">Typ diagramu</div>
+								<div class="menu">
+									<div class="item" data-value="graph">Graf</div>
+									<div class="item" data-value="tree">Drzewo</div>
+								</div>
+							</div>
+						</td>					
+					</tr>
+				</table>
+			</div>
+			
+			<div class="ui right vertical sidebar" style="width: 35%; padding: 10px; background-color: rgba(255, 255, 255, 1)">
+				<div style="text-align: right">
+					<i class="ui tiny icon hide remove" style="color: blue">
+					</i>
+				</div>
+				<div class="articlesPane" style="padding: 10px; margin: 10px;">
+				</div>
+			</div>
+			
+			<div class="pusher">
+				<div id="mynetwork" ></div>
+			</div>
+					
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="source\config.js"></script>
+	<script type="text/javascript" src="source\WikiService.js"></script>
+	<script type="text/javascript" src="source\ArticlesPane.js"></script>
+	<script type="text/javascript" src="source\NodePopup.js"></script>
+	<script type="text/javascript" src="source\BaseGraph.js"></script>
+	<script type="text/javascript" src="source\TreeGraph.js"></script>
+	<script type="text/javascript" src="source\WikiGraphEventHandler.js"></script>
+	<script type="text/javascript" src="source\WikiGraph.js"></script>
+	<script type="text/javascript" src="source\UI.js"></script>
+	
+	<script>
+		(function() {
+			var ui = new App.UI();
+			ui.init();
+		}())
+		
+		$(".caption .icon").popup();
+		$(".icon.plus").popup();
+		$("input.prompt").popup();
+	</script>
+	
+</body>
+</html>
