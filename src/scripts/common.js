@@ -5,7 +5,7 @@ function animVariable(value, desiredValue, duration, action, end) {
 	var easeOutQuint = function (t) { return 1+(--t)*t*t };
 	
 	var t = 0;
-	var step = 60;
+	var step = 30;
 	var interval = setInterval(() => {
 		if (t >= duration) {
 			action(desiredValue);
@@ -16,5 +16,5 @@ function animVariable(value, desiredValue, duration, action, end) {
 			action(value+diff*easeOutQuint(t/duration));
 		}
 		t += step;
-	}, 60);
+	}, step);
 }
