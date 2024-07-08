@@ -6,16 +6,16 @@
 				<div class="project-name">${project.name}</div>
 				
 				<span>
-					<img class="icon" src="images/icons/person.png"/><span class="label"> ${project.group}</span>
-					<img class="icon" src="images/icons/clock.png"/><span class="label"> ${project.year}</span>
+					<img class="icon" src="images/icons/person.png" title="Number of people"/><span class="label"> ${project.group}</span>
+					<img class="icon" src="images/icons/clock.png" title="Project year"/><span class="label"> ${project.year}</span>
 					${
 						project.repo ? `
-							<a target="blank" href="${project.repo}"><img class="icon" src="images/icons/github.png"/></a>` 
+							<a target="blank" href="${project.repo}" title="Github repo"><img class="icon" src="images/icons/github.png"/></a>` 
 						: ''
 					}
 					${
 						project.url ? `
-							<a target="blank" href="${project.url}"><img class="icon" src="images/icons/arrow.png"/></a>` 
+							<a target="blank" href="${project.url}" title="Live preview"><img class="icon" src="images/icons/arrow.png"/></a>` 
 						: ''
 					}
 				</span>
