@@ -34,7 +34,7 @@
 		for (var i=0;i<headers.length;i++) {
 			var header = headers[i];
 			var screenPos = header.offsetTop - container.scrollTop;
-			if (screenPos > container.clientHeight/2) {
+			if (screenPos > container.clientHeight/4) {
 				temp = i;
 				break;
 			}
