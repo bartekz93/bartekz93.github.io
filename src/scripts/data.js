@@ -124,4 +124,17 @@
         desc: "Simple note-taking application using file system (folders and .md files) to store notes. It's desktop application built with html, css and typescript and electron framework (known mainly from Atom and Visual Studio Code editors). Application is able to display md files as raw text, html preview, or both in split screen. It supports code highlightning and latex equations thanks to highlight.js and katex libraries. UI written with React is supposed to mime traditional desktop apps with dockable windows, toolbars, tabpanels, context menus and so on.",
         imagesCount: 4,
     },
+	{
+        name: 'PersonalStats',
+		group: 1,
+        year: '2024',
+        tech: ['C#', '.NET', 'Angular', 'SQL Server'],
+        tools: ['VisualStudio', 'VS Code'],
+		desc: 'Application to tracking personal statistics like budget, activities, habits and so on',
+        images: 'personalstats',
+		repo: "https://github.com/bartekz93/PersonalStats",
+        imagesCount: 4,
+		videosCount: 0,
+		videos: []
+    },
 ];
